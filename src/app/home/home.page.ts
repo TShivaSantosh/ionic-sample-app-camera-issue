@@ -16,9 +16,9 @@ export class HomePage implements AfterViewInit{
       video.srcObject = stream;
       video.play();
     })
-    .catch( (error) => {
+    .catch( (e) => {
       // eslint-disable-next-line no-console
-      console.log("Something went wrong!" + );
+      console.log("Something went wrong!" + e.message);
     });
   }
 
