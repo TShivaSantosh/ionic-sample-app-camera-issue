@@ -11,7 +11,7 @@ export class HomePage implements AfterViewInit{
 
   ngAfterViewInit(): void {
     let video: any = document.querySelector("#videoElement");
-    navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio:false })
+    navigator.mediaDevices.getUserMedia({ video: true, audio:true })
     .then( (stream) => {
       video.srcObject = stream;
       video.play();
